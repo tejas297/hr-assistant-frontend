@@ -41,7 +41,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::100697278889:role/hrairolefrontend
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync to S3
